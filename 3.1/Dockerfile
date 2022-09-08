@@ -16,8 +16,10 @@ RUN sudo apt-get update && sudo apt-get install -y --no-install-recommends \
 		# Rails dep
 		ffmpeg \
 		# until the base image has it
-		libcurl4-openssl-dev \
+		# libcurl4-openssl-dev \
+		libcurl4 \
 		libffi7 \
+		libgd3 \
 		libgdbm6 \
 		libgdbm-dev \
 		# Rails dep
