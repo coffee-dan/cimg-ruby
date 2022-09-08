@@ -17,7 +17,7 @@ RUN sudo apt-get update && sudo apt-get install -y --no-install-recommends \
 		ffmpeg \
 		# until the base image has it
 		libcurl4-openssl-dev \
-		libffi-dev \
+		libffi7 \
 		libgdbm6 \
 		libgdbm-dev \
 		# Rails dep
@@ -25,7 +25,7 @@ RUN sudo apt-get update && sudo apt-get install -y --no-install-recommends \
 		libncurses5-dev \
 		# Rails dep
 		libpq-dev \
-		libreadline6-dev \
+		libreadline-dev \
 		# install libsqlite3-dev until the base image has it
 		# Rails dep
 		libsqlite3-dev \
@@ -33,6 +33,7 @@ RUN sudo apt-get update && sudo apt-get install -y --no-install-recommends \
 		# Rails dep
 		libxml2-dev \
 		libyaml-dev \
+		libxslt1-dev \
 		# Rails dep
 		memcached \
 		# Rails dep
@@ -44,6 +45,8 @@ RUN sudo apt-get update && sudo apt-get install -y --no-install-recommends \
 		# Rails dep
 		sqlite3 \
 		zlib1g-dev \
+		# Rails dep
+		software-properties-common \
 	&& \
 	# Skip installing gem docs
 	echo "gem: --no-document" > ~/.gemrc && \
